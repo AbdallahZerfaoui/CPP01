@@ -1,0 +1,8 @@
+Hello, this is a test file.
+The string 'test' should be replaced by 'exam'.
+
+TEST is not the same as test.
+This is a special case with symbols: test$%^&test and more test!
+Edge testcases include testtest where patterns overlap.
+Let's see how it handles empty strings and large replacements.
+The following sentence is empty replacement .
