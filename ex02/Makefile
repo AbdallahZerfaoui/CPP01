@@ -40,10 +40,10 @@ CXXFLAGS = -std=c++17 -Wall -Wextra -Werror -g
 # LDFLAGS =
 
 # Name of the final executable
-TARGET = ex00
+TARGET = ex02
 
 # Find all .cpp files in the current directory
-SOURCES = main.cpp Zombie.cpp newZombie.cpp randomChump.cpp
+SOURCES = main.cpp
 # Generate corresponding object file names (replace .cpp with .o)
 OBJECTS = $(SOURCES:.cpp=.o)
 

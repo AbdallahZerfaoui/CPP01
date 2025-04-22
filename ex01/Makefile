@@ -75,6 +75,10 @@ fclean: clean
 
 re: art fclean $(TARGET)
 
+run: re
+	@echo "${GREEN}Running $(TARGET)...${RESET}"
+	./$(TARGET)
+
 art:
 	@echo "                                                                                            "
 	@echo "        CCCCCCCCCCCCCPPPPPPPPPPPPPPPPP   PPPPPPPPPPPPPPPPP        000000000       1111111   "
