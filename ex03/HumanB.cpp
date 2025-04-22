@@ -1,21 +1,15 @@
 #include "HumanB.hpp"
 
 
-// HumanB::HumanB(std::string newName)
-// {
-// 	name = newName;
-// }
-// HumanB::HumanB(const std::string& newName) : name(newName){}
-HumanB::HumanB(const std::string& name)
-    : name(name), weapon(NULL){}
+HumanB::HumanB(std::string newName)
+: name(newName), weapon(NULL) {}
 
 void HumanB::attack() const
 {
 	std::cout << name << " attacks with their " << weapon->getType() << '\n';
 }
 
-void HumanB::setWeapon(Weapon& new_weapon)
+void HumanB::setWeapon(Weapon& newWeapon)
 {
-	// weapon->setType(new_weapon.getType());
-	weapon = &new_weapon;
+	weapon = &newWeapon;
 }

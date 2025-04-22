@@ -22,10 +22,3 @@ int main()
 	}
 	return 0;
 }
-
-// int main()
-// {
-// 	Weapon club = Weapon("crude spiked club");
-// 	club.setType("some other type of club");
-// 	std::cout << club.getType() << '\n';
-// }
