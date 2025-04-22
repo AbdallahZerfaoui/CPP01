@@ -8,5 +8,4 @@ int main()
 	new_zombie->announce();
 	delete new_zombie;
 	randomChump(name2);
-	
 }
