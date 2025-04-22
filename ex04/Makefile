@@ -40,10 +40,10 @@ CXXFLAGS = -std=c++17 -Wall -Wextra -Werror -g
 # LDFLAGS =
 
 # Name of the final executable
-TARGET = ex00
+TARGET = ex04
 
 # Find all .cpp files in the current directory
-SOURCES = main.cpp Zombie.cpp newZombie.cpp randomChump.cpp
+SOURCES = main.cpp
 # Generate corresponding object file names (replace .cpp with .o)
 OBJECTS = $(SOURCES:.cpp=.o)
 
@@ -71,13 +71,13 @@ clean:
 # Rule to clean up generated files
 # .PHONY prevents 'make' from confusing this rule with a file named 'clean'
 fclean: clean
-	$(RM) $(TARGET)
+	$(RM) $(TARGET) *.replace
 
 re: art fclean $(TARGET)
 
 run: re
 	@echo "${GREEN}Running $(TARGET)...${RESET}"
-	./$(TARGET)
+	./$(TARGET) test_file "test" "exam"
 
 art:
 	@echo "                                                                                            "
