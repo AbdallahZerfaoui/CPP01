@@ -26,7 +26,7 @@ endif
 # =============================================================================
 
 # Compiler
-CXX = g++
+CXX = c++
 RM = rm -f
 
 # Compiler flags:
@@ -78,6 +78,10 @@ re: art fclean $(TARGET)
 run: re
 	@echo "${GREEN}Running $(TARGET)...${RESET}"
 	./$(TARGET)
+
+valgrind: re
+	@echo "${GREEN}Running Valgrind on $(TARGET)...${RESET}"
+	valgrind --leak-check=full --show-leak-kinds=all --track-origins=yes ./$(TARGET)
 
 art:
 	@echo "                                                                                            "

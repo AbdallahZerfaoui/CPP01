@@ -1,16 +1,16 @@
-#include <iostream>
-#include <sstream>  // Needed for stringstream
+// Zombie.hpp
 #include <string>
 
-
-class Zombie {
-	std::string name;
+class Zombie
+{
+	private:
+		std::string _name;
 
 	public:
-	void addName(std::string newName);
-	std::string getName();
-	void announce();
-	~Zombie();
+		void addName(std::string newName);
+		std::string getName();
+		void announce();
+		~Zombie();
 };
 
 // functions

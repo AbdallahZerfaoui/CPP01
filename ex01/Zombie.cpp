@@ -1,21 +1,22 @@
 #include "Zombie.hpp"
+#include <iostream>
 
 void Zombie::addName(std::string newName)
 {
-	name = newName;
+	_name = newName;
 }
 
 std::string Zombie::getName()
 {
-	return name;
+	return _name;
 }
 
 void Zombie::announce()
 {
-	std::cout << name << ": BraiiiiiiinnnzzzZ...\n";
+	std::cout << _name << ": BraiiiiiiinnnzzzZ...\n";
 }
 
 Zombie::~Zombie()
 {
-	std::cout << "GoodBye " << name << "!!!\n";
+	std::cout << "GoodBye " << _name << "!!!\n";
 }
