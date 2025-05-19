@@ -1,7 +1,7 @@
+#General
 .vscode
 *.o
 *.dSYM
-
 *.py
 ex03_old/
 ex04/main_old.cpp

@@ -1,9 +1,10 @@
-#include <iostream>
+// Zombie.hpp
+#include <string>
 
-class Zombie 
+class Zombie
 {
 	private:
-		std::string name;
+		std::string _name;
 
 	public:
 		void addName(std::string newName);
