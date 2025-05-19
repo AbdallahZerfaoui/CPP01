@@ -103,4 +103,4 @@ art:
 	@echo "        CCCCCCCCCCCCCPPPPPPPPPP          PPPPPPPPPP               000000000     111111111111"
 
 
-.PHONY: all clean fclean re art run
+.PHONY: all clean fclean re art run valgrind
