@@ -12,6 +12,7 @@ class Zombie
 		std::string _name;
 
 	public:
+		Zombie(std::string name); // Parameterized constructor
 		void addName(std::string newName);
 		std::string getName();
 		void announce();

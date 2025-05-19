@@ -8,7 +8,7 @@
 */
 Zombie *newZombie(std::string name)
 {
-	Zombie *zombie = new Zombie;
-	zombie->addName(name);
-	return (zombie);
+	// new returns a pointer to the allocated memory
+	// and the constructor initializes the Zombie with the given name
+	return new Zombie(name);
 }
