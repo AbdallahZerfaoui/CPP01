@@ -40,10 +40,10 @@ CXXFLAGS = -std=c++17 -Wall -Wextra -Werror -g
 # LDFLAGS =
 
 # Name of the final executable
-TARGET = ex04
+TARGET = ex05
 
 # Find all .cpp files in the current directory
-SOURCES = main.cpp
+SOURCES = main.cpp Harl.cpp
 # Generate corresponding object file names (replace .cpp with .o)
 OBJECTS = $(SOURCES:.cpp=.o)
 
@@ -71,13 +71,16 @@ clean:
 # Rule to clean up generated files
 # .PHONY prevents 'make' from confusing this rule with a file named 'clean'
 fclean: clean
-	$(RM) $(TARGET) *.replace
+	$(RM) $(TARGET)
 
 re: art fclean $(TARGET)
 
 run: re
 	@echo "${GREEN}Running $(TARGET)...${RESET}"
-	./$(TARGET) test_file "test" "exam"
+	./$(TARGET)
+
+valgrind : re
+	valgrind --leak-check=full --show-leak-kinds=all --track-origins=yes ./$(TARGET)
 
 art:
 	@echo "                                                                                            "
@@ -99,4 +102,4 @@ art:
 	@echo "        CCCCCCCCCCCCCPPPPPPPPPP          PPPPPPPPPP               000000000     111111111111"
 
 
-.PHONY: all clean fclean re art run
+.PHONY: all clean fclean re art run valgrind
