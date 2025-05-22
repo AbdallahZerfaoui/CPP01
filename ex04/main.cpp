@@ -1,5 +1,11 @@
 #include <iostream>
 #include <fstream>
+#include <string>
+
+// colors
+#define RED "\033[31m"
+#define GREEN "\033[32m"
+#define RESET "\033[0m"
 
 
 /*
@@ -27,8 +33,12 @@
 */
 int main(int argc, char **argv)
 {
-	if (argc != 4) 
+	if (argc != 4)
+	{
+		std::cout << RED << "Error: Wrong number of arguments" << std::endl;
+		std::cout << "Usage: ./your_program_name <input_file> <string_to_find> <string_to_replace>" << RESET << std::endl;	
 		return 1;
+	}
 	
 	std::string new_file_name = 
 			std::string(argv[1]) + ".replace";
